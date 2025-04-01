@@ -16,52 +16,52 @@
   },
   {
     "source": "/docs/save-payment-method/",
-    "target": "/docs/guides/save-payment-method/",
+    "target": "/guides/save-payment-method/",
     "status": "301"
   },
   {
     "source": "/docs/verify-signature/",
-    "target": "/docs/guides/verify-signature/",
+    "target": "/guides/verify-signature/",
     "status": "301"
   },
   {
     "source": "/docs/shopify-integration/",
-    "target": "/docs/e-commerce/shopify/monei-payments/",
+    "target": "/e-commerce/shopify/monei-payments/",
     "status": "301"
   },
   {
     "source": "/docs/woocommerce-integration/",
-    "target": "/docs/e-commerce/woocommerce/",
+    "target": "/e-commerce/woocommerce/",
     "status": "301"
   },
   {
     "source": "/docs/bizum-integration/",
-    "target": "/docs/payment-methods/bizum/",
+    "target": "/payment-methods/bizum/",
     "status": "301"
   },
   {
     "source": "/docs/paypal-integration/",
-    "target": "/docs/payment-methods/paypal/",
+    "target": "/payment-methods/paypal/",
     "status": "301"
   },
   {
     "source": "/docs/accept-card-payment/",
-    "target": "/docs/build-custom-checkout/",
+    "target": "/build-custom-checkout/",
     "status": "301"
   },
   {
     "source": "/docs/monei-js-api/",
-    "target": "/docs/monei-js/reference/",
+    "target": "/monei-js/reference/",
     "status": "301"
   },
   {
     "source": "/docs/monei-js-overview/",
-    "target": "/docs/monei-js/overview/",
+    "target": "/monei-js/overview/",
     "status": "301"
   },
   {
     "source": "/docs/build-custom-checkout/",
-    "target": "/docs/integrations/build-custom-checkout/",
+    "target": "/integrations/build-custom-checkout/",
     "status": "301"
   },
   {
@@ -71,32 +71,37 @@
   },
   {
     "source": "/docs/use-payment-modal/",
-    "target": "/docs/integrations/use-payment-modal/",
+    "target": "/integrations/use-payment-modal/",
     "status": "301"
   },
   {
     "source": "/docs/e-commerce/magento2/",
-    "target": "/docs/e-commerce/adobe-commerce/",
+    "target": "/e-commerce/adobe-commerce/",
     "status": "301"
   },
   {
     "source": "/docs/integrations/partner/",
-    "target": "/docs/monei-connect/",
+    "target": "/monei-connect/",
     "status": "301"
   },
   {
     "source": "/docs/integrations/monei-connect/",
-    "target": "/docs/monei-connect/",
+    "target": "/monei-connect/",
     "status": "301"
   },
   {
     "source": "/reference/parameters/",
-    "target": "/docs/monei-js/reference/",
+    "target": "/monei-js/reference/",
     "status": "301"
   },
   {
     "source": "/api/",
-    "target": "/docs/apis/rest/",
+    "target": "/apis/rest/",
+    "status": "301"
+  },
+  {
+    "source": "/docs/<*>",
+    "target": "/<*>",
     "status": "301"
   }
 ]
