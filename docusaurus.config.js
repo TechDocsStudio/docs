@@ -35,16 +35,16 @@ module.exports = {
       },
       items: [
         {
-          to: 'docs/',
+          to: 'getting-started/',
           label: 'Documentation',
           position: 'right',
-          activeBaseRegex: '^/docs/(?!apis/)'
+          activeBaseRegex: '^/(?!apis/)'
         },
         {
-          to: 'docs/apis/rest/',
+          to: 'apis/rest/',
           label: 'API',
           position: 'right',
-          activeBaseRegex: '^/docs/apis/'
+          activeBaseRegex: '^/apis/'
         },
         {
           to: 'https://support.monei.com',
@@ -90,7 +90,7 @@ module.exports = {
         docs: {
           id: 'docs',
           path: 'docs',
-          routeBasePath: 'docs',
+          routeBasePath: '/',
           docItemComponent: '@theme/ApiItem',
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/MONEI/docs/edit/master/'
