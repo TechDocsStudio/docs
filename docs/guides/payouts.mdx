@@ -19,7 +19,7 @@ Before you start, you need to make sure that you have Bizum enabled in [MONEI Da
 
 To test your Bizum payout integration:
 
-You can use the [MONEI API endpoint](https://docs.monei.com/api/#tag/Bizum) to verify if the phone number is registered with Bizum before sending the money to the end user.
+You can use the [MONEI API endpoint](/apis/rest/bizum/) to verify if the phone number is registered with Bizum before sending the money to the end user.
 
 Bizum payouts do not require client's confirmation. You only need to know their phone number.
 
@@ -107,7 +107,7 @@ The following parameters are required:
 - **transactionType** `string` - `PAYOUT`
 - **paymentMethod** `object` - Payment method object. It must contain `bizum` object with `phoneNumber` property.
 
-Check all available [request parameters](/docs/apis/rest/payments-create/).
+Check all available [request parameters](/apis/rest/payments-create/).
 
 ### 2. Handle the response
 
@@ -142,7 +142,7 @@ Bizum payouts are executed immediately. If the request is successful, you will r
 }
 ```
 
-Check the full list of returned [response parameters](/docs/apis/rest/schemas/payment/).
+Check the full list of returned [response parameters](/apis/rest/schemas/payment/).
 
 Optionally, you can redirect the client to the `nextAction.redirectUrl` to show the payout status or receipt.
 

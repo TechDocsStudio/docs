@@ -12,25 +12,25 @@ const features = [
     title: 'Use a prebuilt payment page',
     description:
       'MONEI Hosted payment page is the simplest way to securely collect payments from your customers with multiple payment methods like Cards, PayPal, Bizum, GooglePay, Apple Pay & Installments by Cofidis.',
-    url: '/docs/integrations/use-prebuilt-payment-page'
+    url: '/integrations/use-prebuilt-payment-page'
   },
   {
     title: 'Build a custom checkout',
     description:
       'Use MONEI UI components to build your custom checkout and securely accept Cards, PayPal, Bizum, GooglePay, Apple Pay, multiple BNPL solutions, MB Way, SEPA Direct Debit and other payment methods.',
-    url: '/docs/integrations/build-custom-checkout'
+    url: '/integrations/build-custom-checkout'
   },
   {
     title: 'Integrate with multiple platforms',
     description:
       'Easily integrate MONEI with Shopify, Magento Commerce - Adobe, Wix, Salesforce Commerce Cloud, WooCommerce, PrestaShop, commercetools, Spreedly, saleor and other popular platforms.',
-    url: '/docs/#integrate-with-your-e-commerce-platform'
+    url: '/getting-started#integrate-with-your-platform'
   },
   {
     title: 'Connect with business platforms and marketplaces',
     description:
       'Help your users/merchants accept more payment methods while saving time and money integrating payments into your business platform or marketplace.',
-    url: '/docs/monei-connect'
+    url: '/monei-connect'
   }
 ];
 
@@ -82,7 +82,7 @@ function Home() {
           <div className={styles.buttons}>
             <Link
               className={clsx('button button--primary button--lg', styles.getStarted)}
-              to={useBaseUrl('docs/')}
+              to={useBaseUrl('getting-started/')}
             >
               Get Started
             </Link>

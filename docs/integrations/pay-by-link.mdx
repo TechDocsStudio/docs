@@ -10,7 +10,7 @@ Send your customers a unique link via email, WhatsApp or SMS to pay online in on
 
 ## Before you begin
 
-This page explains how to create payment links programmatically using [MONEI Payments API](/docs/apis/rest/payments-create/). You can also create payment links in your [MONEI Dashboard](https://dashboard.monei.com/).
+This page explains how to create payment links programmatically using [MONEI Payments API](/apis/rest/payments-create/). You can also create payment links in your [MONEI Dashboard](https://dashboard.monei.com/).
 
 To test your integration:
 
@@ -22,7 +22,7 @@ To test your integration:
 
 ### 1. Create a Payment `Server-side`
 
-Create a [Payment](/docs/apis/rest/schemas/payment/) on your server with an amount and currency.
+Create a [Payment](/apis/rest/schemas/payment/) on your server with an amount and currency.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -97,7 +97,7 @@ The following parameters are required:
 - **currency** `string` - Three-letter [ISO currency code](https://en.wikipedia.org/wiki/ISO_4217), in uppercase. Must be a supported currency.
 - **orderId** `string` - An order ID from your system. A unique identifier that can be used to reconcile the payment with your internal system.
 
-Check all available [request parameters](/docs/apis/rest/payments-create/).
+Check all available [request parameters](/apis/rest/payments-create/).
 
 ### 2. Send a payment link to your customer
 
@@ -163,4 +163,4 @@ $monei->payments->sendLink([
   </TabItem>
 </Tabs>
 
-See the full list of [request parameters](/docs/apis/rest/payments-send-link/).
+See the full list of [request parameters](/apis/rest/payments-send-link/).

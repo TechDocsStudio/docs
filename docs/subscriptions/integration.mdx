@@ -97,7 +97,7 @@ The following parameters are required:
 - **interval** `string` - Subscription interval, one of `day`, `week`, `month`, `year`
 - **intervalCount** `number` - Number of intervals between subscription subscriptions.
 
-Check all available [request parameters](/docs/apis/rest/subscriptions-create/).
+Check all available [request parameters](/apis/rest/subscriptions-create/).
 
 ### 2. Activate the subscription.
 
@@ -149,11 +149,11 @@ $monei->subscriptions->activate(
 </TabItem>
 </Tabs>
 
-Check all available [request parameters](/docs/apis/rest/subscriptions-activate/).
+Check all available [request parameters](/apis/rest/subscriptions-activate/).
 
 ### 3. Redirect the customer to the `redirectUrl` from the response
 
-In the response from the [activate subscription](/docs/apis/rest/subscriptions-activate/) request you'll get the following response:
+In the response from the [activate subscription](/apis/rest/subscriptions-activate/) request you'll get the following response:
 
 ```json
 {
@@ -192,11 +192,11 @@ Customer enters the Card information and goes through the 3D secure verification
 ### 5. Customer is redirected back to your server
 
 - if customer clicks **"Back to \{\{shop.name}}"** link (you can provide `shop.name` in the [public business details settings](https://dashboard.monei.com/settings)), s/he is redirected to `cancelUrl`. (Usually this url is the checkout page on your website, where the user had started a checkout process)
-- in any other case the customer is redirected to the `completeUrl` with **payment_id** and **subscription_id** query parameters. Use [get subscription](/docs/apis/rest/subscriptions-get/) endpoint to get the subscription status.
+- in any other case the customer is redirected to the `completeUrl` with **payment_id** and **subscription_id** query parameters. Use [get subscription](/apis/rest/subscriptions-get/) endpoint to get the subscription status.
 
 ### 6. An asynchronous request is sent to your server
 
-MONEI will notify you about the payment status by sending an HTTP POST request to the `callbackUrl`. The request body will contain the full [subscription object](/docs/apis/rest/schemas/subscription/) in JSON format.
+MONEI will notify you about the payment status by sending an HTTP POST request to the `callbackUrl`. The request body will contain the full [subscription object](/apis/rest/schemas/subscription/) in JSON format.
 
 This ensures that you get the payment status even when the customer closed the browser window or lost Internet connection.
 

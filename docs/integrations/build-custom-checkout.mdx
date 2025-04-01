@@ -52,7 +52,7 @@ import TabItem from '@theme/TabItem';
 
 ### 1. Create a Payment `Server-side`
 
-Create a [Payment](/docs/apis/rest/schemas/payment/) on your server with an amount and currency. Always decide how much to charge on the server side, a trusted environment, as opposed to the client-side. This prevents malicious customers from being able to choose their own prices.
+Create a [Payment](/apis/rest/schemas/payment/) on your server with an amount and currency. Always decide how much to charge on the server side, a trusted environment, as opposed to the client-side. This prevents malicious customers from being able to choose their own prices.
 
 <Tabs
   defaultValue="curl"
@@ -128,7 +128,7 @@ The following parameters are required:
 - **orderId** `string` - An order ID from your system. A unique identifier that can be used to reconcile the payment with your internal system.
 - **callbackUrl** `string` - The URL to which a payment result should be sent asynchronously.
 
-Check all available [request parameters](/docs/apis/rest/payments-create/).
+Check all available [request parameters](/apis/rest/payments-create/).
 
 Included in the returned Payment object is a payment `id`, which is used on the client side to securely complete the payment process instead of passing the entire Payment object.
 
@@ -167,7 +167,7 @@ cardInput.render('#container');
 If you have a checkout flow that requires you to generate a payment token before you create a payment on your server, you can initialize MONEI Components by providing the following parameters:
 
 - **accountId** `string` - Your MONEI account ID. Instead of passing **paymentId** you can initialize a card input with the **accountId** and **sessionId** (optional). Generate a payment token before you create the payment itself.
-- **sessionId** `string` - Unique session ID in your system. Provide a different **sessionId** for each customer. Use this parameter to ensure that the customer who generated the token is the same as the one doing the payment. Only required if you pass a token to your server. If you provide a **sessionId** when initializing MONEI component you will need to provide the same value when you [create a payment](/docs/apis/rest/schemas/payment/) on your server.
+- **sessionId** `string` - Unique session ID in your system. Provide a different **sessionId** for each customer. Use this parameter to ensure that the customer who generated the token is the same as the one doing the payment. Only required if you pass a token to your server. If you provide a **sessionId** when initializing MONEI component you will need to provide the same value when you [create a payment](/apis/rest/schemas/payment/) on your server.
 - **amount** `positive integer` (not required for CardInput) - Amount intended to be collected by this payment. A positive integer representing how much to charge in the smallest currency unit (e.g., 100 cents to charge 1.00 USD). You'll need to pass the same value when creating the payment.
 - **currency** `string` (not required for CardInput) - Three-letter [ISO currency code](https://en.wikipedia.org/wiki/ISO_4217), in uppercase. Must be a supported currency. You'll need to pass the same value when creating the payment.
 
@@ -179,7 +179,7 @@ To complete the payment you need to confirm it using monei.js [confirmPayment](m
 
 You need to provide a `paymentId` (obtained in [step 1](#1-create-a-payment-server-side)) and `paymentToken` generated with Component. Check the [Payment Methods](/payment-methods/card.mdx) section for more details about how to generate `paymentToken` for each payment method.
 
-You can also provide additional parameters like `customer.email`. Check all available [parameters](/docs/apis/rest/payments-confirm/).
+You can also provide additional parameters like `customer.email`. Check all available [parameters](/apis/rest/payments-confirm/).
 
 ```js title="client.js"
 monei
@@ -218,12 +218,12 @@ function moneiTokenHandler(token) {
 After you confirm the payment, MONEI will automatically show a popup window with a 3d secure confirmation screen (if needed, depending on the payment method).
 
 :::note
-As an alternative process you can submit generated `paymentToken` to your sever and then [confirm payment](/docs/apis/rest/payments-confirm/) on the server-side.
+As an alternative process you can submit generated `paymentToken` to your sever and then [confirm payment](/apis/rest/payments-confirm/) on the server-side.
 :::
 
 ### 4. An asynchronous request is sent to your server.
 
-MONEI will notify you about the payment status by sending an HTTP POST request to the `callbackUrl`. The request body will contain full [payment object](/docs/apis/rest/schemas/payment/) in JSON format.
+MONEI will notify you about the payment status by sending an HTTP POST request to the `callbackUrl`. The request body will contain full [payment object](/apis/rest/schemas/payment/) in JSON format.
 
 This ensures that you get the payment status even when a customer closes the browser window or loses internet connection.
 

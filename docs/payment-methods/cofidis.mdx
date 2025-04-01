@@ -57,7 +57,7 @@ Unfortunately Cofidis does not provide test environment
 
 ### 1. Create a Payment `Server-side`
 
-Create a [Payment](/docs/apis/rest/schemas/payment/) on your server with an amount and currency. Always decide how much to charge on the server side, a trusted environment, as opposed to the client. This prevents malicious customers from being able to choose their own prices.
+Create a [Payment](/apis/rest/schemas/payment/) on your server with an amount and currency. Always decide how much to charge on the server side, a trusted environment, as opposed to the client. This prevents malicious customers from being able to choose their own prices.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -144,7 +144,7 @@ The following parameters are required:
 - **completeUrl** `string` - A customer will be redirected to this url when the payment is complete (successful or failed).
 - **cancelUrl** `string` - A customer is redirected to this url if he cancels the payment (clicks "Go back")
 
-Check all available [request parameters](/docs/apis/rest/payments-create/).
+Check all available [request parameters](/apis/rest/payments-create/).
 
 Included in the returned Payment object is a payment `id`, which is used on the client side to securely complete the payment process instead of passing the entire Payment object.
 
@@ -194,11 +194,11 @@ Check the [MONEI JS Reference](monei-js/reference.md#Cofidis-component) for more
 
 ### 3. Check the payment status `Server-side`
 
-After the payment is completed the customer is redirected to the `completeUrl` with **payment_id** query parameter, you can obtain the status of the payment by calling [get payment](/docs/apis/rest/payments-get/) endpoint.
+After the payment is completed the customer is redirected to the `completeUrl` with **payment_id** query parameter, you can obtain the status of the payment by calling [get payment](/apis/rest/payments-get/) endpoint.
 
 ### 4. An asynchronous request is sent to your server.
 
-MONEI will notify you about the payment status by sending an HTTP POST request to the `callbackUrl`. The request body will contain full [payment object](/docs/apis/rest/schemas/payment/) in JSON format.
+MONEI will notify you about the payment status by sending an HTTP POST request to the `callbackUrl`. The request body will contain full [payment object](/apis/rest/schemas/payment/) in JSON format.
 
 This ensures that you get the payment status even when customer closed the browser window or lost internet connection.
 

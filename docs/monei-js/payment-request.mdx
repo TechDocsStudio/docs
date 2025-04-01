@@ -45,13 +45,13 @@ If you are using [WooCommerce Plugin](e-commerce/woocommerce.mdx) or [custom dom
 In order to register your domain with Apple, you will need to first verify your
 ownership of the domain. Go to your [MONEI Dashboard → Settings → Payment Methods](https://dashboard.monei.com/settings/payment-methods), choose **Register domain with Apple** and follow the instructions in the popup.
 
-You can also verify your domain with Apple using [MONEI REST API](/docs/apis/rest/apple-pay-domain-register/).
+You can also verify your domain with Apple using [MONEI REST API](/apis/rest/apple-pay-domain-register/).
 
 ## Integration
 
 ### 1. Create a Payment `Server-side`
 
-Create a [Payment](/docs/apis/rest/schemas/payment/) on your server with an amount and currency. Always decide how much to charge on the server side, a trusted environment, as opposed to the client. This prevents malicious customers from being able to choose their own prices.
+Create a [Payment](/apis/rest/schemas/payment/) on your server with an amount and currency. Always decide how much to charge on the server side, a trusted environment, as opposed to the client. This prevents malicious customers from being able to choose their own prices.
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -134,7 +134,7 @@ The following parameters are required:
 Payment Request Component is also available as a React and Vue component. [Check out our examples](monei-js/overview.mdx#card-input-component).
 :::
 
-Check all available [request parameters](/docs/apis/rest/payments-create/).
+Check all available [request parameters](/apis/rest/payments-create/).
 
 Included in the returned Payment object is a payment `id`, which is used on the client side to securely complete the payment process instead of passing the entire Payment object.
 
@@ -181,7 +181,7 @@ Check the [MONEI JS Reference](monei-js/reference.md#paymentrequest-ui-component
 
 To complete the payment you need to confirm it using monei.js [confirmPayment](monei-js/reference.md#confirmpayment-function) function
 
-You need to provide a `paymentId` (obtained in [step 1](#1-create-a-payment-server-side)) and `paymentToken` generated with Payment Request Component. You can also provide additional parameters like `customer.email`. Check all available [parameters](/docs/apis/rest/payments-confirm/).
+You need to provide a `paymentId` (obtained in [step 1](#1-create-a-payment-server-side)) and `paymentToken` generated with Payment Request Component. You can also provide additional parameters like `customer.email`. Check all available [parameters](/apis/rest/payments-confirm/).
 
 ```js title="client.js"
 // Confirm the payment
@@ -201,12 +201,12 @@ function moneiTokenHandler(token) {
 ```
 
 :::note
-As an alternative process you can submit generated `paymentToken` to your sever and then [confirm payment](/docs/apis/rest/payments-confirm/) on the server-side.
+As an alternative process you can submit generated `paymentToken` to your sever and then [confirm payment](/apis/rest/payments-confirm/) on the server-side.
 :::
 
 ### 4. An asynchronous request is sent to your server.
 
-MONEI will notify you about the payment status by sending an HTTP POST request to the `callbackUrl`. The request body will contain full [payment object](/docs/apis/rest/schemas/payment/) in JSON format.
+MONEI will notify you about the payment status by sending an HTTP POST request to the `callbackUrl`. The request body will contain full [payment object](/apis/rest/schemas/payment/) in JSON format.
 
 This ensures that you get the payment status even when customer closed the browser window or lost internet connection.
 

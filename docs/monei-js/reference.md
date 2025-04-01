@@ -47,9 +47,9 @@ cardInput.render('#card_input_container');
 
 ### CardInput options
 
-- **paymentId** `string` - A payment ID provided by MONEI in [create payment](/docs/apis/rest/payments-create/) request. Generated payment token will be bound to this payment.
+- **paymentId** `string` - A payment ID provided by MONEI in [create payment](/apis/rest/payments-create/) request. Generated payment token will be bound to this payment.
 - **accountId** `string` - Your MONEI account ID. Required if you're initializing card input with account ID. Instead of passing **paymentId** you can initialize a card input with the **accountId** and **sessionId** (optional). Generate a payment token before you create the payment itself.
-- **sessionId** `string` - Unique session ID in your system. Provide a different **sessionId** for each customer. Use this parameter to ensure that the customer who generated the token is the same as the one making the payment. Only required if you pass a token to your server. If you provide a **sessionId** when initializing MONEI Component you will need to provide the same value when you [create a payment](/docs/apis/rest/schemas/payment/) on your server.
+- **sessionId** `string` - Unique session ID in your system. Provide a different **sessionId** for each customer. Use this parameter to ensure that the customer who generated the token is the same as the one making the payment. Only required if you pass a token to your server. If you provide a **sessionId** when initializing MONEI Component you will need to provide the same value when you [create a payment](/apis/rest/schemas/payment/) on your server.
 - **style** `object` - Customize the appearance of this Component using CSS properties passed in a [Style](#cardinput-style-object) object.
 - **language** `string` - The [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) code represents the desired component language. Supported locales include `en`, `es`, `ca`, `pt`, `de`, `it`, `fr`, `nl`, `et`, `fi`, `lv`, `no`, `pl` and `ru`. By default, MONEI smartly detects the correct language for the buyer based on their geolocation and browser preferences.
 - **placeholders** `object` - Customize input placeholders
@@ -200,9 +200,9 @@ paypal.render('#paypal_container');
 
 ### PayPal options
 
-- **paymentId** `string` - A payment ID provided by MONEI in [create payment](/docs/apis/rest/payments-create/) request. Generated payment token will be bound to this payment.
+- **paymentId** `string` - A payment ID provided by MONEI in [create payment](/apis/rest/payments-create/) request. Generated payment token will be bound to this payment.
 - **accountId** `string` - Your MONEI account ID. Required if you're initializing the Component with account ID. Instead of passing **paymentId** you can initialize the Component with the **accountId** and **sessionId** (optional). Generate a payment token before you create the payment itself.
-- **sessionId** `string` - Unique session ID in your system. Provide a different **sessionId** for each customer. Use this parameter to ensure that the customer who generated the token is the same as the one making the payment. Only required if you pass a token to your server. If you provide a **sessionId** when initializing MONEI Component you will need to provide the same value when you [create a payment](/docs/apis/rest/schemas/payment/) on your server.
+- **sessionId** `string` - Unique session ID in your system. Provide a different **sessionId** for each customer. Use this parameter to ensure that the customer who generated the token is the same as the one making the payment. Only required if you pass a token to your server. If you provide a **sessionId** when initializing MONEI Component you will need to provide the same value when you [create a payment](/apis/rest/schemas/payment/) on your server.
 - **amount** `positive integer` - Amount intended to be collected by this payment. A positive integer representing how much to charge in the smallest currency unit (e.g., 100 cents to charge 1.00 USD). Required if you initialize a Component with **accountId**. You'll need to pass the same value when creating the payment.
 - **currency** `string` - Three-letter [ISO currency code](https://en.wikipedia.org/wiki/ISO_4217), in uppercase. Must be a supported currency. Required if you initialize a Component with **accountId**. You'll need to pass the same value when creating the payment.
 - **transactionType** `string` - Controls when the funds will be captured. Required if you initialize a Component with **accountId**. You'll need to pass the same value when creating the payment.
@@ -251,9 +251,9 @@ paymentRequest.render('#payment_request');
 
 ### PaymentRequest options
 
-- **paymentId** `string` - A payment ID provided by MONEI in [create payment](/docs/apis/rest/payments-create/) request. Generated payment token will be bound to this payment.
+- **paymentId** `string` - A payment ID provided by MONEI in [create payment](/apis/rest/payments-create/) request. Generated payment token will be bound to this payment.
 - **accountId** `string` - Your MONEI account ID. Required if you're initializing the Component with account ID. Instead of passing **paymentId** you can initialize the Component with the **accountId** and **sessionId** (optional). Generate a payment token before you create the payment itself.
-- **sessionId** `string` - Unique session ID in your system. Provide a different **sessionId** for each customer. Use this parameter to ensure that the customer who generated the token is the same as the one making the payment. Only required if you pass a token to your server. If you provide a **sessionId** when initializing MONEI Component you will need to provide the same value when you [create a payment](/docs/apis/rest/schemas/payment/) on your server.
+- **sessionId** `string` - Unique session ID in your system. Provide a different **sessionId** for each customer. Use this parameter to ensure that the customer who generated the token is the same as the one making the payment. Only required if you pass a token to your server. If you provide a **sessionId** when initializing MONEI Component you will need to provide the same value when you [create a payment](/apis/rest/schemas/payment/) on your server.
 - **amount** `positive integer` - Amount intended to be collected by this payment. A positive integer representing how much to charge in the smallest currency unit (e.g., 100 cents to charge 1.00 USD). Required if you initialize a Component with **accountId**. You'll need to pass the same value when creating the payment.
 - **currency** `string` - Three-letter [ISO currency code](https://en.wikipedia.org/wiki/ISO_4217), in uppercase. Must be a supported currency. Required if you initialize a Component with **accountId**. You'll need to pass the same value when creating the payment.
 - **language** `string` - The [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) code represents the desired button language. Supported locales include `en`, `es`, `ca`, `pt`, `de`, `it`, `fr`, `nl`, `et`, `fi`, `lv`, `no`, `pl` and `ru`.
@@ -300,9 +300,9 @@ bizum.render('#bizum');
 
 ### Bizum options
 
-- **paymentId** `string` - A payment ID provided by MONEI in [create payment](/docs/apis/rest/payments-create/) request. Generated payment token will be bound to this payment.
+- **paymentId** `string` - A payment ID provided by MONEI in [create payment](/apis/rest/payments-create/) request. Generated payment token will be bound to this payment.
 - **accountId** `string` - Your MONEI account ID. Required if you're initializing the Component with account ID. Instead of passing **paymentId** you can initialize the Component with the **accountId** and **sessionId** (optional). Generate a payment token before you create the payment itself.
-- **sessionId** `string` - Unique session ID in your system. Provide a different **sessionId** for each customer. Use this parameter to ensure that the customer who generated the token is the same as the one making the payment. Only required if you pass a token to your server. If you provide a **sessionId** when initializing MONEI Component you will need to provide the same value when you [create a payment](/docs/apis/rest/schemas/payment/) on your server.
+- **sessionId** `string` - Unique session ID in your system. Provide a different **sessionId** for each customer. Use this parameter to ensure that the customer who generated the token is the same as the one making the payment. Only required if you pass a token to your server. If you provide a **sessionId** when initializing MONEI Component you will need to provide the same value when you [create a payment](/apis/rest/schemas/payment/) on your server.
 - **amount** `positive integer` - Amount intended to be collected by this payment. A positive integer representing how much to charge in the smallest currency unit (e.g., 100 cents to charge 1.00 USD). Required if you initialize a Component with **accountId**. You'll need to pass the same value when creating the payment.
 - **currency** `string` - Three-letter [ISO currency code](https://en.wikipedia.org/wiki/ISO_4217), in uppercase. Must be a supported currency. Required if you initialize a Component with **accountId**. You'll need to pass the same value when creating the payment.
 - **language** `string` - The [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) code represents the desired button language. Supported locales include `en`, `es`, `ca`, `pt`, `de`, `it`, `fr`, `nl`, `et`, `fi`, `lv`, `no`, `pl` and `ru`.
@@ -375,7 +375,7 @@ cofidisWidget.render('#cofidis_widget');
 
 ### CofidisWidget options
 
-- **paymentId** `string` - A payment ID provided by MONEI in [create payment](/docs/apis/rest/payments-create/) request. Generated payment token will be bound to this payment.
+- **paymentId** `string` - A payment ID provided by MONEI in [create payment](/apis/rest/payments-create/) request. Generated payment token will be bound to this payment.
 - **amountInt** `positive integer` - The amount used as a base to calculate load conditions. A positive integer in the smallest currency unit (e.g., 100 cents to charge 1.00 USD).
 - **amount** `positive float` (required if **amountInt** is not specified) - The amount used as a base to calculate load conditions.
 - **language** `string` - The [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) code represents the desired button language. Supported locales include `en`, `es`, `ca`, `pt`, `de`, `it`, `fr`, `nl`, `et`, `fi`, `lv`, `no`, `pl` and `ru`.
@@ -449,7 +449,7 @@ cofidisPayWidget.render('#cofidis_widget');
 
 ### CofidisPayWidget options
 
-- **paymentId** `string` - A payment ID provided by MONEI in [create payment](/docs/apis/rest/payments-create/) request. Generated payment token will be bound to this payment.
+- **paymentId** `string` - A payment ID provided by MONEI in [create payment](/apis/rest/payments-create/) request. Generated payment token will be bound to this payment.
 - **amountInt** `positive integer` - The amount used as a base to calculate load conditions. A positive integer in the smallest currency unit (e.g., 100 cents to charge 1.00 USD).
 - **amount** `positive float` (required if **amountInt** is not specified) - The amount used as a base to calculate load conditions.
 - **language** `string` - The [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) code represents the desired button language. Supported locales include `en`, `es`, `ca`, `pt`, `de`, `it`, `fr`, `nl`, `et`, `fi`, `lv`, `no`, `pl` and `ru`.
@@ -480,7 +480,7 @@ declare const confirmPayment: (params: ConfirmPaymentParams) => Promise<PaymentR
 
 ### Confirm payment params
 
-- **paymentId** ` string` `required` - A payment ID provided by MONEI in [create payment](/docs/apis/rest/payments-create/) request
+- **paymentId** ` string` `required` - A payment ID provided by MONEI in [create payment](/apis/rest/payments-create/) request
 - **paymentToken** `string` - A payment token generated by monei.js. If **paymentToken** is present the popup window will open directly to a 3D Secure confirmation screen (if needed).
 - **generatePaymentToken** `boolean` - If set to true a permanent token that represents a payment method used in the payment will be generated.
 - **fullscreen** `boolean` - Set this parameter to true to open a fullscreen confirmation window.
@@ -488,7 +488,7 @@ declare const confirmPayment: (params: ConfirmPaymentParams) => Promise<PaymentR
 - **allowedPaymentMethods** `string[]` - List of allowed payment methods. If provided overrides payment methods allowed in the payment. Supported payment methods: `card`, `googlePay`,`clickToPay`, `bizum`, `paypal`.
 - **customDomain** `string` - Custom domain to use for the payment popup window. If you have custom domain configured this option is required for the popup window to work.
 
-Check [confirm payment](/docs/apis/rest/payments-confirm/) for the full list of parameters.
+Check [confirm payment](/apis/rest/payments-confirm/) for the full list of parameters.
 
 ### Payment result
 
@@ -505,7 +505,7 @@ Check [confirm payment](/docs/apis/rest/payments-confirm/) for the full list of 
   - **mustRedirect** `boolean`
   - **redirectUrl** `string`
 
-Check [payment object](/docs/apis/rest/schemas/payment/) for the full description of each field
+Check [payment object](/apis/rest/schemas/payment/) for the full description of each field
 
 Example:
 

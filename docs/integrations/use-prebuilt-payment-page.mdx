@@ -117,7 +117,7 @@ The following parameters are required:
 - **callbackUrl** `string` - The URL to which a payment result should be sent asynchronously.
 - **cancelUrl** `string` - The URL the customer will be directed to if s/he decided to cancel the payment and return to your website.
 
-Check all available [request parameters](/docs/apis/rest/payments-create/).
+Check all available [request parameters](/apis/rest/payments-create/).
 
 ### 2. Redirect the customer to the `redirectUrl` from the response
 
@@ -158,11 +158,11 @@ Customer enters the Card information (or other payment information depending on 
 ### 4. Customer is redirected back to your server
 
 - if customer clicks **"Back to \{\{shop.name}}"** link (you can provide `shop.name` parameter when you create a payment or in the [public business details settings](https://dashboard.monei.com/settings)), s/he is redirected to `cancelUrl`. (Usually this url is the checkout page on your website, where the user had started a checkout process)
-- in any other case the customer is redirected to the `completeUrl` with **payment_id** query parameter. Use [get payment](/docs/apis/rest/payments-get/) endpoint to get the payment status.
+- in any other case the customer is redirected to the `completeUrl` with **payment_id** query parameter. Use [get payment](/apis/rest/payments-get/) endpoint to get the payment status.
 
 ### 5. An asynchronous request is sent to your server
 
-MONEI will notify you about the payment status by sending an HTTP POST request to the `callbackUrl`. The request body will contain the full [payment object](/docs/apis/rest/schemas/payment/) in JSON format.
+MONEI will notify you about the payment status by sending an HTTP POST request to the `callbackUrl`. The request body will contain the full [payment object](/apis/rest/schemas/payment/) in JSON format.
 
 This ensures that you get the payment status even when the customer closed the browser window or lost Internet connection.
 

@@ -74,7 +74,7 @@ $monei->payments->create([
 </TabItem>
 </Tabs>
 
-Check all available [request parameters](/docs/apis/rest).
+Check all available [request parameters](/apis/rest).
 
 :::note
 To retrieve the payment token for future use without charging your customer, create a payment with the following parameters:
@@ -145,7 +145,7 @@ $monei->payments->confirm(
 </TabItem>
 </Tabs>
 
-Check all available [request parameters](/docs/apis/rest/payments-confirm/).
+Check all available [request parameters](/apis/rest/payments-confirm/).
 
 ### When you submit a payment form `Client-side`
 
@@ -177,10 +177,10 @@ Check [card payment method](payment-methods/card.mdx) integration for more detai
 
 ## 2. Obtain and store payment token
 
-After the payment is completed the customer is redirected to the `completeUrl` with **payment_id** query parameter, you can obtain permanent `paymentToken` by calling [get payment](/docs/apis/rest/payments-get/) endpoint.
+After the payment is completed the customer is redirected to the `completeUrl` with **payment_id** query parameter, you can obtain permanent `paymentToken` by calling [get payment](/apis/rest/payments-get/) endpoint.
 
-Store this `paymentToken` in your database along with customer information. Next time the customer does a purchase, [create a payment](/docs/apis/rest/payments-create/) with this token to skip payment form. Keep in mind that the customer will still need to complete 3d secure verification.
+Store this `paymentToken` in your database along with customer information. Next time the customer does a purchase, [create a payment](/apis/rest/payments-create/) with this token to skip payment form. Keep in mind that the customer will still need to complete 3d secure verification.
 
 :::note
-MONEI will not return **paymentToken** in the HTTP POST request to the **callbackUrl** for security reasons. You have to call [get payment](/docs/apis/rest/payments-get/) endpoint to retrieve the token. Generated **paymentToken** does not expire and should only be used **server-side**.
+MONEI will not return **paymentToken** in the HTTP POST request to the **callbackUrl** for security reasons. You have to call [get payment](/apis/rest/payments-get/) endpoint to retrieve the token. Generated **paymentToken** does not expire and should only be used **server-side**.
 :::
